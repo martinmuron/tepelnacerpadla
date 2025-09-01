@@ -1,0 +1,12 @@
+# Exclude playwright-mcp directory from deployment
+playwright-mcp/
+playwright-mcp/**
+
+# Exclude test files
+tests/
+test-results/
+
+# Exclude local development files
+.env.local
+.DS_Store
+*.log
