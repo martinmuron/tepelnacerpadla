@@ -112,6 +112,59 @@
   --sidebar-ring: oklch(0.78 0.135 174.8); /* #00F5D0 teal */
 }
 
+@keyframes float-slow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spotlight {
+  0% {
+    transform: translate3d(-30%, -20%, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(15%, 25%, 0) scale(1.15);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(-30%, -20%, 0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float-slow 14s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-soft 10s ease-in-out infinite;
+  }
+
+  .animate-spotlight {
+    animation: spotlight 18s ease-in-out infinite;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
